@@ -1158,6 +1158,10 @@ static int __init samsung_leds_init(struct samsung_laptop *samsung)
 	return ret;
 }
 
+#ifndef BACKLIGHT_POWER_ON
+#define BACKLIGHT_POWER_ON 1  
+#endif
+
 static void samsung_backlight_exit(struct samsung_laptop *samsung)
 {
 	if (samsung->backlight_device) {
