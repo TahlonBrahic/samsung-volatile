@@ -1568,13 +1568,8 @@ static int __init samsung_init(void)
 	int ret;
 
 	quirks = &samsung_unknown;
-	if (!force && !dmi_check_system(samsung_dmi_table))
-		printk(KERN_ERR "Samsung module: Unsupported system.\n");
-		return -ENODEV;
-
+	
 	samsung = kzalloc(sizeof(*samsung), GFP_KERNEL);
-	if (!samsung)
-		return -ENOMEM;
 
 	mutex_init(&samsung->sabi_mutex);
 	samsung->handle_backlight = true;
