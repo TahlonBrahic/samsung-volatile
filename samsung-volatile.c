@@ -546,6 +546,10 @@ static void check_for_stepping_quirk(struct samsung_laptop *samsung)
 	set_brightness(samsung, orig_level);
 }
 
+#ifndef BACKLIGHT_POWER_ON
+#define BACKLIGHT_POWER_ON 1  
+#endif
+
 static int update_status(struct backlight_device *bd)
 {
 	struct samsung_laptop *samsung = bl_get_data(bd);
@@ -1157,10 +1161,6 @@ static int __init samsung_leds_init(struct samsung_laptop *samsung)
 
 	return ret;
 }
-
-#ifndef BACKLIGHT_POWER_ON
-#define BACKLIGHT_POWER_ON 1  
-#endif
 
 static void samsung_backlight_exit(struct samsung_laptop *samsung)
 {
