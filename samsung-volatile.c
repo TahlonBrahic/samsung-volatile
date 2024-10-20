@@ -1,9 +1,6 @@
 // SPDX-License-Identifier: GPL-2.0-only
 /*
- * Samsung Laptop driver
- *
- * Copyright (C) 2009,2011 Greg Kroah-Hartman (gregkh@suse.de)
- * Copyright (C) 2009,2011 Novell Inc.
+ * Experimental Samsung Laptop driver
  */
 #define pr_fmt(fmt) KBUILD_MODNAME ": " fmt
 
