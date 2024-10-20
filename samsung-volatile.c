@@ -1553,9 +1553,9 @@ static const struct dmi_system_id samsung_dmi_table[] __initconst = {
 		DMI_MATCH(DMI_SYS_VENDOR, "SAMSUNG ELECTRONICS CO., LTD."),
 		DMI_MATCH(DMI_PRODUCT_NAME, "960QFG"),
 		DMI_MATCH(DMI_BOARD_NAME, "NP960QFG-KA1US"),
-	},
+	        },
 	.driver_data = &samsung_specific_quirks,
-	}.
+	},
 	{ },
 };
 MODULE_DEVICE_TABLE(dmi, samsung_dmi_table);
